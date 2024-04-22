@@ -1,0 +1,12 @@
+{
+     
+    "builds":[
+        {"src": "CustomApiHandler.py", "use":"@vercel/python"}
+    ],
+    "routes":[
+        {"src":"/(.*)","dest":"CustomApiHandler.py"}
+    ]
+
+}
+
+
