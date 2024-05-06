@@ -43,7 +43,7 @@ def handle_endpoint2():
     MySecondTime=request.args.get('MySecondTime', default=None, type=str)
     ChosenAsset = []
     cursor = ''
-    
+    print("something")
     if limit=="All":
         limit=str(100)
 
