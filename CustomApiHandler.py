@@ -43,7 +43,7 @@ def handle_endpoint2():
     MySecondTime=request.args.get('MySecondTime', default=None, type=str)
     ChosenAsset = []
     cursor = ''
-    print("something")
+    
     if limit=="All":
         limit=str(100)
 
@@ -53,7 +53,7 @@ def handle_endpoint2():
         data = response.json()
         ChosenAsset.extend(data['data'])
         cursor = data['nextPageCursor']
-        if not cursor or MySecondTime=="True":
+        if not cursor or MySecondTime=="true":
             break
 
         if int(limit)!=100:
@@ -66,8 +66,7 @@ def handle_endpoint2():
 @app.errorhandler(404)
 def page_not_found(e):
     # your error handling logic here
-    
-    return 'Message from seismic that something went wrong xd bruh....', 404  
+    return 'Message from seismic that something went wrong....', 404  
 
 if __name__ == '__main__':
     app.run(debug=True)
