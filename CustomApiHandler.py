@@ -66,7 +66,8 @@ def handle_endpoint2():
 @app.errorhandler(404)
 def page_not_found(e):
     # your error handling logic here
-    return 'Message from seismic that something went wrong....', 404  
+    
+    return 'Message from seismic that something went wrong xd bruh....', 404  
 
 if __name__ == '__main__':
     app.run(debug=True)
