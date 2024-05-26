@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 import json 
 import requests
-import time 
+#import time 
 
 app = Flask(__name__)
 
@@ -27,7 +27,7 @@ def handle_endpoint():
             break
         
         AllData.extend(page)
-        time.sleep(0.5)
+       # time.sleep(0.5)
         page_number+=1
     # Use the query parameters in your response or processing
     
